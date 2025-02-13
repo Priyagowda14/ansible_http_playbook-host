@@ -8,7 +8,8 @@
         state: present
         update_cache: true
 
-    - name: Ensure Nginx is running
-      service:
+    - name: Ensure Nginx is running and enabled
+      systemd:
         name: nginx
         state: started
+        enabled: true
